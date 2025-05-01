@@ -134,6 +134,12 @@ function bones_scripts_and_styles() {
 		// FONT AWESOME ICONS
 		// wp_register_style( 'fontawesome-stylesheet', get_stylesheet_directory_uri() . '/library/fonts/fontawesome/css/all.min.css', array(), '', 'all' );
 
+			//adding scripts file in the footer
+		wp_register_script( 'mixitup-js', get_stylesheet_directory_uri() . '/library/js/libs/mixitup.min.js', array( 'jquery' ), '', true );
+		wp_register_script( 'mixitupagination-js', get_stylesheet_directory_uri() . '/library/js/libs/mixitup-pagination.min.js', array( 'jquery' ), '', true );
+		wp_register_script( 'mixitupmultifilter-js', get_stylesheet_directory_uri() . '/library/js/libs/mixitup-multifilter.min.js', array( 'jquery' ), '', true );
+
+
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js?v=1.0.0', array( 'jquery' ), '', true );
 
@@ -154,6 +160,9 @@ function bones_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
+			wp_enqueue_script( 'mixitup-js' );
+		wp_enqueue_script( 'mixitupagination-js' );
+		wp_enqueue_script( 'mixitupmultifilter-js' );
 		wp_enqueue_script( 'bones-js' );
 
 	}

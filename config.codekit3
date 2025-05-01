@@ -242,6 +242,39 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/library\/js\/libs\/mixitup-multifilter.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/library\/js\/libs\/min\/mixitup-multifilter.min-min.js",
+      "oF" : 0,
+      "sC" : 1,
+      "tS" : 0
+    },
+    "\/library\/js\/libs\/mixitup-pagination.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/library\/js\/libs\/min\/mixitup-pagination.min-min.js",
+      "oF" : 0,
+      "sC" : 1,
+      "tS" : 0
+    },
+    "\/library\/js\/libs\/mixitup.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/library\/js\/libs\/min\/mixitup.min-min.js",
+      "oF" : 0,
+      "sC" : 1,
+      "tS" : 0
+    },
     "\/library\/js\/libs\/modernizr.custom.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1760,94 +1793,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/taxonomy-custom_cat.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_banner_with_button.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_banner_with_button.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_button.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_button.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_custom_element.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_custom_element.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_custom_headline.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_custom_headline.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_image_with_link.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_image_with_link.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_impuls_intro.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_impuls_intro.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_job_list.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_job_list.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_services_list.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_services_list.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_team_grid.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_team_grid.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_video.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_video.php",
-      "oF" : 0
-    },
-    "\/vc-elements\/modul_zitat.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/vc-elements\/modul_zitat.php",
       "oF" : 0
     }
   },
