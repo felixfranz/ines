@@ -73,7 +73,7 @@ a, *:focus {
 p a,
 p a:visited {
 	text-decoration: underline;
-	color: var(--blue);
+	color: var(--purple);
 	padding: 2px 0;
 
 	&:hover {
@@ -353,7 +353,43 @@ CONTENT
 	
 }
 
+/*********************
+REFERENZEN
+*********************/
 
+.ref_article{
+	padding: 20px;
+	border: 1px solid var(--border-color);
+	margin-top: -1px;
+	position: relative;
+	z-index: 1;
+
+	pointer-events: none;
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		grid-template-columns: 100%;
+		grid-template-rows: min-content minmax(max(calc(150px + 2rem), 6rem), 1fr) min-content;
+		grid-template-areas:
+			"topRow"
+			"inputContainer"
+			"bottomRow";
+
+	&:hover{
+		z-index: 2;
+		border-color: var(--purple);
+	}
+}
+
+.ref_top_row{
+	grid-area: "topRow";
+pointer-events: none;
+	display: grid;
+	grid-template-columns: repeat(8, minmax(0, 1fr));
+	line-height: 1.4rem;
+	height: 1.4rem;
+grid-template-areas: "name name topMenuDropdown topMenuDropdown sliders sliders info price";
+}
 
 
 
@@ -480,6 +516,8 @@ PAGE NAVI STYLES
 .pagination,
 .wp-prev-next {
 	margin: 1.5em 0;
+	margin: 0;
+	padding: 10px;
 }
 	.pagination{
     text-align: center;

@@ -477,7 +477,6 @@ html {
   --text-gray: #999;
   --blue: blue;
   --purple: #9700d6;
-  --border-color: #e3e3e3;
   --font-headline: "MetaWeb-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-text: "WorkSans-Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: var(--font-headline);
@@ -1697,31 +1696,6 @@ REFERENZEN
 *********************/
 .ref_article {
   padding: 20px;
-  border: 1px solid var(--border-color);
-  margin-top: -1px;
-  position: relative;
-  z-index: 1;
-  pointer-events: none;
-  display: grid;
-  grid-column: 1;
-  grid-row: 1;
-  grid-template-columns: 100%;
-  grid-template-rows: min-content minmax(max(150px + 2rem, 6rem), 1fr) min-content;
-  grid-template-areas: "topRow" "inputContainer" "bottomRow";
-}
-.ref_article:hover {
-  z-index: 2;
-  border-color: var(--purple);
-}
-
-.ref_top_row {
-  grid-area: "topRow";
-  pointer-events: none;
-  display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  line-height: 1.4rem;
-  height: 1.4rem;
-  grid-template-areas: "name name topMenuDropdown topMenuDropdown sliders sliders info price";
 }
 
 /* post meta */
@@ -2330,4 +2304,4 @@ be set to display none.
   nav {
     display: none;
   }
-}
+}/*# sourceMappingURL=style.css.map */

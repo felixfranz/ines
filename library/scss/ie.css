@@ -40,7 +40,6 @@ html {
   --text-gray: #999;
   --blue: blue;
   --purple: #9700d6;
-  --border-color: #e3e3e3;
   --font-headline: "MetaWeb-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-text: "WorkSans-Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: var(--font-headline);
@@ -412,4 +411,4 @@ header.php file to see what they are:
 
 .lt-ie8 .class { ... }
 
-*/
+*//*# sourceMappingURL=ie.css.map */
