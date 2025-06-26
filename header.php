@@ -68,9 +68,14 @@
 
 			<header class="header" id="header">
 
-				<div id="inner-header" class="wrap cf">
+				<div id="inner-header" class="cf wrap">
 					
-					<div id="logo" ><a href="<?php echo home_url(); ?>"></a></div>
+					<div id="logo" >
+						<a href="<?php echo home_url(); ?>">
+							<span class="logo__name">Ines Moers</span>
+							<span class="logo__subline">Subline</span>
+						</a>
+					</div>
 					
 					<div class="nav_container_desktop">
 

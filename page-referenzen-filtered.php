@@ -43,7 +43,8 @@
 															$ref_formats = get_the_terms( get_the_ID(), 'ref_format' );
 
 															$topic_name_array = array();
-
+															$format_name_array = array();
+															$kind_name_array = array();
 															// TAXONOMIE: TOPIC
 															if ( $topics && ! is_wp_error( $topics ) ) : 
 
@@ -109,18 +110,18 @@
 														<div class="ref_article">
 															<div class="ref_top_row">
 																<div class="ref_date"><?php echo $ref_date; ?></div>
-																<div class="ref_kind"><?php echo $kinds_to_echo; ?></div>
-																<div class="ref_format"><?php echo $formats_to_echo; ?></div>
+																<div class="ref_kind"><span>Aufgabe:</span> <?php echo $kinds_to_echo; ?></div>
+																<div class="ref_format"><span>Format: </span> <?php echo $formats_to_echo; ?></div>
 															</div>
 															<div class="ref_middle_row">
 																<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 															</div>
 															<div class="ref_bottom_row">
-																<div class="ref_topic"><?php echo $topics_to_echo; ?></div>
+																<div class="ref_topic"><span>Thema: </span><?php echo $topics_to_echo; ?></div>
 																<?php if($ref_link) : ?>
-																<div class="ref_link"><?php echo $ref_link; ?></div>
+																<div class="ref_link"><span>Link: </span><a href="<?php echo $ref_link; ?>"><?php echo $ref_link; ?></a></div>
 																<?php endif; ?>
-																<div class="ref_format">Mehr Informationen ›</div>
+																<div class="ref_more"><a href="<?php the_permalink(); ?>">Mehr Informationen ›</a></div>
 															</div>
 															
 

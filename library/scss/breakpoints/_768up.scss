@@ -38,29 +38,28 @@ HEADER STYLES
 
 #header {
 	
-	*{ @include transition(all 0.2s ease-in-out); }
+	
 	
 	#inner-header{
-		padding: 20px 0;
-		height: 105px;
+		padding:  0;
+		height: 89px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
+		//align-items: center;
 
 		&::before, &::after{
 			display: none;
 		}
 
 		#logo {
-			float: left;
-			margin: 10px 0 0;
-			width: 20%;
+		
+		
 
 			a {	
 				width: 100%;
-				max-width: 300px;
-				height: 43px;
+				
 				&:hover{
-					opacity: 0.85;
+					//opacity: 0.85;
 				}
 			}
 		}
@@ -78,14 +77,14 @@ NAVIGATION STYLES
 }
 
 .nav_container_desktop{
-	display: inline-block;
+	//display: inline-block;
 }
 
 
 .nav {
 	float: right;
 	border: 0;
-	margin-top: 20px;
+	//margin-top: 20px;
 	display: flex;
 	justify-content: flex-end;
 
@@ -98,35 +97,10 @@ NAVIGATION STYLES
 		&>a {
 			// background: red;
 			display: block;
-			border-bottom: 1px solid transparent;
-			margin: 0 10px;
-			padding:12px 0 12px;
-			text-decoration: none;
-			font-size: 13px;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
 			position: relative;
 
-			&::after{
-				content: '';
-				display: inline-block;
-				width: 0%;
-				height: 1px;
-
-				position: absolute;
-				bottom:0;
-				left: 50%;
-				transform: translateX(-50%);
-				@include transition(all 0.1s cubic-bezier(.12,.845,.305,1));
-			}
-
 			&:hover, &:focus {
-				color: #444;
-				text-decoration: none;
-
-				&::after{
-					width: 100%;
-				}
+				
 			}
 		}
 

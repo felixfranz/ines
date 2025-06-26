@@ -472,16 +472,17 @@ COLORS
 html {
   --main-color: #00a5d6;
   --secondary-color: #273582;
-  --black: #111;
+  --black: #070723;
   --white: #fff;
   --text-gray: #999;
   --blue: blue;
   --purple: #9700d6;
   --border-color: #e3e3e3;
-  --font-headline: "MetaWeb-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-text: "WorkSans-Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-sans: var(--font-headline);
+  --font-serif: "Zodiak", "Garamond", "Times New Roman", serif;
+  --font-sans: "GeneralSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --border: 1px solid var(--border-color);
   --ease: cubic-bezier(.12, .845, .305, 1);
+  --transition: all 0.2s var(--ease);
   --ratio-square: 1;
   --ratio-landscape: 4/3;
   --ratio-portrait: 3/4;
@@ -490,14 +491,10 @@ html {
   --ratio-golden: 1.6180/1;
   --gray-0: #f8f9fa;
   --gray-1: #f1f3f5;
-  --gray-2: #e9ecef;
+  --gray-2: #e3e3e3;
   --gray-3: #dee2e6;
   --gray-4: #ced4da;
-  --gray-5: #adb5bd;
-  --gray-6: #868e96;
-  --gray-7: #495057;
-  --gray-8: #343a40;
-  --gray-9: #212529;
+  --gray-5: #b5b5b5;
 }
 
 /******************************************************************
@@ -510,17 +507,22 @@ Stylesheet: Typography
 /*********************
 FONT FACE 
 *********************/
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('../fonts/font-name.eot');
-      src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('../fonts/font-name.woff') format('woff'),
-             url('../fonts/font-name.ttf') format('truetype'),
-             url('../fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
+@font-face {
+  font-family: "Zodiak";
+  src: url("../fonts/Zodiak-Variable.eot");
+  src: url("../fonts/Zodiak-Variable.eot?#iefix") format("embedded-opentype"), url("../fonts/Zodiak-Variable.woff2") format("woff2"), url("../fonts/Zodiak-Variable.ttf") format("truetype"), url("../fonts/Zodiak-Variable.svg#font-name") format("svg");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans";
+  src: url("../fonts/GeneralSans-Variable.eot");
+  src: url("../fonts/GeneralSans-Variable.eot?#iefix") format("embedded-opentype"), url("../fonts/GeneralSans-Variable.woff2") format("woff2"), url("../fonts/GeneralSans-Variable.ttf") format("truetype"), url("../fonts/GeneralSans-Variable.svg#font-name") format("svg");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
 /******************************************************************
 Site Name:
 Author:
@@ -646,202 +648,126 @@ them however you see fit.
 */
 @media (max-width: 767px) {
   .m-all {
-    float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
   .m-1of2 {
-    float: left;
-    padding-right: 0.75em;
     width: 50%;
   }
   .m-1of3 {
-    float: left;
-    padding-right: 0.75em;
     width: 33.33%;
   }
   .m-2of3 {
-    float: left;
-    padding-right: 0.75em;
     width: 66.66%;
   }
   .m-1of4 {
-    float: left;
-    padding-right: 0.75em;
     width: 25%;
   }
   .m-3of4 {
-    float: left;
-    padding-right: 0.75em;
     width: 75%;
   }
 }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
   .t-all {
-    float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
   .t-1of2 {
-    float: left;
-    padding-right: 0.75em;
     width: 50%;
   }
   .t-1of3 {
-    float: left;
-    padding-right: 0.75em;
     width: 33.33%;
   }
   .t-2of3 {
-    float: left;
-    padding-right: 0.75em;
     width: 66.66%;
   }
   .t-1of4 {
-    float: left;
-    padding-right: 0.75em;
     width: 25%;
   }
   .t-3of4 {
-    float: left;
-    padding-right: 0.75em;
     width: 75%;
   }
   .t-1of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 20%;
   }
   .t-2of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 40%;
   }
   .t-3of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 60%;
   }
   .t-4of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 80%;
   }
 }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
   .d-all {
-    float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
   .d-1of2 {
-    float: left;
-    padding-right: 0.75em;
     width: 50%;
   }
   .d-1of3 {
-    float: left;
-    padding-right: 0.75em;
     width: 33.33%;
   }
   .d-2of3 {
-    float: left;
-    padding-right: 0.75em;
     width: 66.66%;
   }
   .d-1of4 {
-    float: left;
-    padding-right: 0.75em;
     width: 25%;
   }
   .d-3of4 {
-    float: left;
-    padding-right: 0.75em;
     width: 75%;
   }
   .d-1of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 20%;
   }
   .d-2of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 40%;
   }
   .d-3of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 60%;
   }
   .d-4of5 {
-    float: left;
-    padding-right: 0.75em;
     width: 80%;
   }
   .d-1of6 {
-    float: left;
-    padding-right: 0.75em;
     width: 16.6666666667%;
   }
   .d-1of7 {
-    float: left;
-    padding-right: 0.75em;
     width: 14.2857142857%;
   }
   .d-2of7 {
-    float: left;
-    padding-right: 0.75em;
     width: 28.5714286%;
   }
   .d-3of7 {
-    float: left;
-    padding-right: 0.75em;
     width: 42.8571429%;
   }
   .d-4of7 {
-    float: left;
-    padding-right: 0.75em;
     width: 57.1428572%;
   }
   .d-5of7 {
-    float: left;
-    padding-right: 0.75em;
     width: 71.4285715%;
   }
   .d-6of7 {
-    float: left;
-    padding-right: 0.75em;
     width: 85.7142857%;
   }
   .d-1of8 {
-    float: left;
-    padding-right: 0.75em;
     width: 12.5%;
   }
   .d-1of9 {
-    float: left;
-    padding-right: 0.75em;
     width: 11.1111111111%;
   }
   .d-1of10 {
-    float: left;
-    padding-right: 0.75em;
     width: 10%;
   }
   .d-1of11 {
-    float: left;
-    padding-right: 0.75em;
     width: 9.0909090909%;
   }
   .d-1of12 {
-    float: left;
-    padding-right: 0.75em;
     width: 8.33%;
   }
 }
@@ -1436,6 +1362,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  font-weight: 400;
+  color: var(--black);
 }
 
 .hidden {
@@ -1550,33 +1478,80 @@ HEADER STYLES
   background: white;
   top: 0;
   width: 100%;
-  z-index: 5;
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  align-items: stretch;
+  position: relative;
+}
+#header::after {
+  content: "";
+  height: 13px;
+  width: 66vw;
+  background: var(--gray-0);
+  position: absolute;
+  bottom: -14px;
 }
 #header #inner-header {
-  padding: 0px 0 5px;
-  height: 70px;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: none;
 }
-#header #inner-header #logo {
-  float: left;
-  margin: 15px 0 0;
-}
-#header #inner-header #logo a {
-  display: inline-block;
-  background: url(../images/logo-wp.svg) 0 0 no-repeat;
-  background-size: contain;
-  width: 150px;
-  height: 43px;
+#header #inner-header nav {
+  display: flex;
 }
 #header #inner-header .nav {
-  margin-top: 10px;
+  margin: 0;
+  display: flex;
 }
 
-#header.nav-down {
+#logo {
+  background: var(--purple);
+  border-right: var(--border);
+  display: flex;
+  position: relative;
+}
+#logo a::before {
+  content: "";
+  position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 5px);
+  background: white;
+  z-index: 1;
+  border-bottom-right-radius: 5px;
+  transition: var(--transition);
+  transform: translateY(0);
 }
-
-#header.nav-up {
-  top: -100px;
+#logo span {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+#logo a {
+  padding: 0 40px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+#logo a:hover::before {
+  transform: translateY(-10px);
+  transition: var(--transition);
+}
+#logo .logo__name {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 600;
+}
+#logo .logo__subline {
+  text-transform: uppercase;
+  text-align: left;
 }
 
 /*********************
@@ -1588,6 +1563,25 @@ NAVIGATION STYLES
 
 .nav_container_desktop {
   display: none;
+  display: flex;
+  align-items: stretch;
+}
+.nav_container_desktop .nav li {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.nav_container_desktop .nav li a {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  padding: 0 40px;
+  border-right: var(--border);
+}
+.nav_container_desktop .nav li a:hover {
+  color: var(--purple);
 }
 
 .nav_container_mobile {
@@ -1684,14 +1678,16 @@ NAVIGATION STYLES
 }
 
 /*********************
-BUTTON FÜR MOBILE
-*********************/
-/*********************
 GLOBAL COMPOSER STYLES
 *********************/
 /*********************
 CONTENT
 *********************/
+#content {
+  position: relative;
+  margin-top: 30px;
+}
+
 /*********************
 REFERENZEN
 *********************/
@@ -1701,27 +1697,81 @@ REFERENZEN
   margin-top: -1px;
   position: relative;
   z-index: 1;
-  pointer-events: none;
+  font-size: 13px;
+  font-weight: 500;
   display: grid;
   grid-column: 1;
   grid-row: 1;
   grid-template-columns: 100%;
-  grid-template-rows: min-content minmax(max(150px + 2rem, 6rem), 1fr) min-content;
-  grid-template-areas: "topRow" "inputContainer" "bottomRow";
+  grid-template-rows: min-content minmax(100px, min-content) min-content;
+  grid-template-areas: "topRow" "middleRow" "bottomRow";
+  color: gray;
 }
 .ref_article:hover {
   z-index: 2;
   border-color: var(--purple);
+  color: var(--black);
+}
+.ref_article:first-of-type {
+  border-radius: 10px 10px 0 0;
+}
+.ref_article:last-of-type {
+  border-radius: 0 0 10px 10px;
+}
+.ref_article div span {
+  font-weight: 700;
+}
+.ref_article a:hover {
+  color: var(--purple);
 }
 
 .ref_top_row {
-  grid-area: "topRow";
+  grid-area: topRow;
   pointer-events: none;
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 1fr;
   line-height: 1.4rem;
   height: 1.4rem;
-  grid-template-areas: "name name topMenuDropdown topMenuDropdown sliders sliders info price";
+  grid-template-areas: "date stil format format ";
+}
+.ref_top_row .ref_date {
+  grid-area: date;
+}
+.ref_top_row .ref_kind {
+  grid-area: stil;
+}
+
+.ref_middle_row {
+  grid-area: middleRow;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24px;
+  color: var(--black);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 12.5% 20px 0;
+}
+
+.ref_bottom_row {
+  grid-area: bottomRow;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  grid-template-areas: "topic topic link link more more more more";
+}
+.ref_bottom_row .ref_topic {
+  grid-area: topic;
+}
+.ref_bottom_row .ref_link {
+  grid-area: link;
+}
+.ref_bottom_row .ref_more {
+  grid-area: more;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* post meta */
@@ -2017,31 +2067,17 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
-  #header * {
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
   #header #inner-header {
-    padding: 20px 0;
-    height: 105px;
+    padding: 0;
+    height: 89px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   #header #inner-header::before, #header #inner-header::after {
     display: none;
   }
-  #header #inner-header #logo {
-    float: left;
-    margin: 10px 0 0;
-    width: 20%;
-  }
   #header #inner-header #logo a {
     width: 100%;
-    max-width: 300px;
-    height: 43px;
-  }
-  #header #inner-header #logo a:hover {
-    opacity: 0.85;
   }
   /*********************
   NAVIGATION STYLES
@@ -2049,13 +2085,9 @@ you can add resource intensive styles.
   .nav_container_mobile, .nav_toggle {
     display: none;
   }
-  .nav_container_desktop {
-    display: inline-block;
-  }
   .nav {
     float: right;
     border: 0;
-    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
     /* end .menu ul li */
@@ -2073,33 +2105,7 @@ you can add resource intensive styles.
   }
   .nav li > a {
     display: block;
-    border-bottom: 1px solid transparent;
-    margin: 0 10px;
-    padding: 12px 0 12px;
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     position: relative;
-  }
-  .nav li > a::after {
-    content: "";
-    display: inline-block;
-    width: 0%;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transition: all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);
-    transition: all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);
-  }
-  .nav li > a:hover, .nav li > a:focus {
-    color: #444;
-    text-decoration: none;
-  }
-  .nav li > a:hover::after, .nav li > a:focus::after {
-    width: 100%;
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
@@ -2330,4 +2336,4 @@ be set to display none.
   nav {
     display: none;
   }
-}
+}/*# sourceMappingURL=style.css.map */

@@ -25,7 +25,7 @@ html{
 	
 	--main-color: #00a5d6;
 	--secondary-color: #273582;
-	--black: #111;
+	--black: #070723;
 	--white: #fff;
 	--text-gray: #999;
 	--blue: blue;
@@ -33,11 +33,12 @@ html{
 	--border-color: #e3e3e3;
 
 	// FONTSTACKS
-	--font-headline: "MetaWeb-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--font-text: "WorkSans-Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--font-sans: var(--font-headline);
-
+	--font-serif: "Zodiak", "Garamond", "Times New Roman", serif;
+	--font-sans: "GeneralSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--border: 1px solid var(--border-color);
+	
 	--ease: cubic-bezier(.12, .845, .305, 1);
+	--transition: all 0.2s var(--ease);
 
 	--ratio-square: 1;
 	--ratio-landscape: 4/3;
@@ -48,14 +49,11 @@ html{
 
 	--gray-0: #f8f9fa;
 	--gray-1: #f1f3f5;
-	--gray-2: #e9ecef;
+	--gray-2: #e3e3e3;
 	--gray-3: #dee2e6;
 	--gray-4: #ced4da;
-	--gray-5: #adb5bd;
-	--gray-6: #868e96;
-	--gray-7: #495057;
-	--gray-8: #343a40;
-	--gray-9: #212529;
+	--gray-5: #b5b5b5;
+
 
 }
 
