@@ -93,6 +93,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: normal;
 	margin: 0 0 0.3em;
+	font-family: var(--font-serif);
 	/* removing text decoration from all headline links */
 	a {
 		text-decoration: none;
@@ -102,22 +103,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 
 h1, .h1 {
-	font-size: 4em;
+	font-size: 34px;
 	line-height: 1.1em;
-	font-weight: 700;
+	font-weight: 600;
+	
 }
 
 h2, .h2 {
-	font-size: 2.8em;
+	font-size: 21px;
 	line-height: 1.2em;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 h3, .h3 {
-	font-size: 2.8em;
+	font-size: 16px;
 	line-height: 1.4em;
-	font-weight: 300;
-	text-transform: uppercase;
+	font-weight: 600;
+
 }
 
 h4, .h4 {
@@ -146,6 +148,11 @@ p, li{
 
 p{
 	margin: 0 0 40px;
+	max-width: 750px;
+}
+
+h2+p{
+	margin-top: 13px;
 }
 
 
@@ -239,6 +246,9 @@ HEADER STYLES
 	.logo__subline{
 		text-transform: uppercase;
 		text-align: left;
+		font-weight: 300;
+		letter-spacing: 0.07em;
+		transform: translateY(-8px);
 	}
 }
 
@@ -425,11 +435,22 @@ CONTENT
 	margin-top: 30px;
 }
 
+.inner-content__main{
+	margin-top: 55px;
+}
+
 /*********************
 REFERENZEN
 *********************/
 .refs_container{
-
+   &:hover{
+	.ref_article{
+		//opacity: 0.6;
+		&:hover{
+			opacity: 1;
+		}
+	}
+   }
 }
 
 .ref_article{
@@ -440,6 +461,7 @@ REFERENZEN
 	z-index: 1;
 	font-size: 13px;
 	font-weight: 500;
+	@include transition(all 0.3s cubic-bezier(.12, .845, .305, 1));
 	//pointer-events: none;
 	display: grid;
 	grid-column: 1;
@@ -454,7 +476,8 @@ REFERENZEN
 	&:hover{
 		z-index: 2;
 		border-color: var(--purple);
-		color: var(--black)
+		color: var(--black);
+		opacity: 1;
 	}
 
 	&:first-of-type{
@@ -515,7 +538,7 @@ REFERENZEN
 	display: grid;
 	grid-template-columns: repeat(8, minmax(0, 1fr));
 	grid-template-rows: 1fr;
-	grid-template-areas: "topic topic link link more more more more";
+	grid-template-areas: "topic topic link link link link link more";
 
 	.ref_topic{
 		grid-area: topic;
@@ -530,6 +553,74 @@ REFERENZEN
 
 	}
 }
+
+// END REFERENZEN LISTE
+
+/// START SINGLE REFERENZ	
+
+.single-reference{
+	.reference_content{
+		
+		display: flex;
+		aside{
+			width: 25%;
+			flex-basis: 25%;
+			padding: 0 30px 0 0;
+			color: var(--gray2);
+			font-size: 13px;
+			animation: fade-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+			-webkit-animation: fade-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+			
+			span{
+				font-weight: 600;
+				display: inline-block;
+				width: 80px;
+				color: var(--gray3);
+			}
+			div{
+				white-space: break-spaces;
+			}
+			
+			div+div{
+				margin-top: 8px;
+			}
+			a{
+				
+				text-decoration: underline;
+				&:hover{
+					color: var(--purple); 
+				}
+			}
+		}
+	}
+}
+
+.article_text{
+	width: 75%;
+	max-width: 750px;
+	.article_text__header{
+		padding-bottom: 21px;
+		
+		&::after{
+			content: '';
+			display: inline-block;
+			height: 11px;
+			width: 100%;
+			background: var(--yellow);
+			animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+			-webkit-animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+			transform-origin: left;
+		}
+	}
+	.entry-content{
+		margin-top: 34px;
+	}
+}
+
+
+
+
+
 
 		/* post meta */
 		.byline {

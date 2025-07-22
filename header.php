@@ -73,7 +73,7 @@
 					<div id="logo" >
 						<a href="<?php echo home_url(); ?>">
 							<span class="logo__name">Ines Moers</span>
-							<span class="logo__subline">Subline</span>
+							<span class="logo__subline">Projektmanagment</span>
 						</a>
 					</div>
 					

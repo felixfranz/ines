@@ -11,12 +11,12 @@
 
 				<div id="inner-content" class="wrap">
 
-						<main id="main" class="m-all t-all d-all">
+						<main id="main" class="inner-content__main m-all t-all d-all">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
-								<section class="entry-content" >
+								<section class="entry-content references_intro" >
 									<?php
 										
 										the_content();
@@ -97,6 +97,7 @@
 															
 														// get custom fields
 															$ref_date		 	= get_field('ref_datum');
+															$ref_date_since		= get_field('ref_datum_since');
 															$ref_content		= get_field('ref_content');
 															$ref_veranstalter	= get_field('ref_veranstalter');
 															$ref_anlass		 	= get_field('ref_anlass');
@@ -109,6 +110,12 @@
 																 ?>
 														<div class="ref_article">
 															<div class="ref_top_row">
+															<?php if($ref_date) : ?>
+																<div class="ref_date"><?php echo $ref_date; ?></div>
+															<?php endif; ?>
+															<?php if($ref_date_since) : ?>
+																<div class="ref_date"><?php echo $ref_date_since; ?></div>
+															<?php endif; ?>
 																<div class="ref_date"><?php echo $ref_date; ?></div>
 																<div class="ref_kind"><span>Aufgabe:</span> <?php echo $kinds_to_echo; ?></div>
 																<div class="ref_format"><span>Format: </span> <?php echo $formats_to_echo; ?></div>

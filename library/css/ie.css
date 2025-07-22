@@ -38,9 +38,12 @@ html {
   --black: #070723;
   --white: #fff;
   --text-gray: #999;
+  --gray2: #6d6d6d;
+  --gray3: #4e4e4e;
   --blue: blue;
   --purple: #9700d6;
   --border-color: #e3e3e3;
+  --yellow: #ffde1f;
   --font-serif: "Zodiak", "Garamond", "Times New Roman", serif;
   --font-sans: "GeneralSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --border: 1px solid var(--border-color);
@@ -368,4 +371,4 @@ header.php file to see what they are:
 
 .lt-ie8 .class { ... }
 
-*//*# sourceMappingURL=ie.css.map */
+*/
