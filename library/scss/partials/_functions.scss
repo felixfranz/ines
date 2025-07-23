@@ -78,6 +78,16 @@ width: 65%;
   }
 }
 
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
 
 // FADE IN
 

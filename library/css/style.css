@@ -579,6 +579,14 @@ width: 65%;
     transform: scaleX(100%);
   }
 }
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
 @keyframes fade-in {
   0% {
     transform: translateX(-50px);
@@ -1877,17 +1885,26 @@ REFERENZEN
   transform-origin: left;
   z-index: 0;
 }
-.article_text .article_text__header::before {
-  content: "";
-  display: inline-block;
+.article_text .article_text__header .line-container {
   height: 21px;
-  width: 21px;
-  border-radius: 50%;
+  width: 100%;
+  background: transparent;
   position: absolute;
-  left: -1px;
   bottom: 21px;
-  background: var(--purple);
   z-index: 1;
+}
+.article_text .article_text__header .line-container .circle {
+  width: 21px;
+  height: 21px;
+}
+.article_text .article_text__header .line-container .circle span {
+  display: inline-block;
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--purple);
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s both;
 }
 .article_text .entry-content {
   margin-top: 34px;

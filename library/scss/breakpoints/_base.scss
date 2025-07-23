@@ -632,20 +632,33 @@ REFERENZEN
 			z-index: 0;
 		}
 
-		&::before{
-			content: '';
-			display: inline-block;
+
+			
+
+		.line-container{
 			height: 21px;
-			width: 21px;
-			border-radius: 50%;
+			width: 100%;
+			background: transparent;
 			position: absolute;
-			left: -1px;
-			bottom: 21px;
-			background: var(--purple);
+			bottom:21px;
 			z-index: 1;
+			.circle{
+				width: 21px;
+				height: 21px;
+			}
+
+			.circle span{
+				display: inline-block;
+				cursor: pointer;
+				width: 21px;
+				height: 21px;
+				border-radius: 50%;
+				background: var(--purple);
+				animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+			
+			}
 		}
 
-		
 	}
 	.entry-content{
 		margin-top: 34px;

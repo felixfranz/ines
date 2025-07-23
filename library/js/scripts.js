@@ -33,7 +33,7 @@ var waitForFinalEvent = (function () {
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 var timeToWaitForLast = 100;
 
-
+gsap.registerPlugin(Draggable,InertiaPlugin);
 /*
  * Put all your regular jQuery in here.
 */
@@ -87,7 +87,11 @@ nav_toggle.click(function(){
 
 
 
-
+  Draggable.create(".circle", {
+    type: "x",
+    bounds: ".line-container",
+    inertia: true
+  });
 
 
 

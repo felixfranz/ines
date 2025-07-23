@@ -141,6 +141,7 @@
 									<div class="ref_meta ref_topic"><span>Auftrag:</span><?php echo $ref_client; ?></div>
 									<?php endif; ?>
 								</aside>
+								<!-- end aside -->
 
 								<section class="reference_content__article_text article_text">
 
@@ -148,14 +149,21 @@
 
 										<h1 class="single-title reference-title"><?php the_title(); ?></h1>
 
+										<div class="line-container">
+											<div class="circle"><span></span></div>
+											
+										</div>
 									</header>
+									<!-- end header -->
 
-									<section class="entry-content cf">
+									<div class="entry-content cf">
 										<?php
 
 											echo $ref_content;
 										?>
-									</section> <!-- end article section -->
+									</div> 
+									<!-- end article content section -->
+
 								</section>
 
 							</article>
