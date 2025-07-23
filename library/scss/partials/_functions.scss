@@ -65,16 +65,8 @@ width: 65%;
   @return calc-percent($target, $container);
 }
 
+/// SCALE IN
 
-@-webkit-keyframes scale-in {
-  0% {
-    transform: scaleX(0);
-  }
-
-  100% {
-    transform: scaleX(100%);
-  }
-}
 
 @keyframes scale-in {
   0% {
@@ -87,18 +79,7 @@ width: 65%;
 }
 
 
-
-@-webkit-keyframes fade-in {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-      opacity: 1;
-  }
-}
+// FADE IN
 
 @keyframes fade-in {
   0% {

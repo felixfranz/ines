@@ -571,30 +571,12 @@ width: calc-percent(650px, 1000px);
 both compile to:
 width: 65%;
 *********************/
-@-webkit-keyframes scale-in {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(100%);
-  }
-}
 @keyframes scale-in {
   0% {
     transform: scaleX(0);
   }
   100% {
     transform: scaleX(100%);
-  }
-}
-@-webkit-keyframes fade-in {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
   }
 }
 @keyframes fade-in {
@@ -1446,7 +1428,7 @@ p a:visited {
 }
 p a:hover,
 p a:visited:hover {
-  background: var(--blue);
+  background: var(--purple);
   color: white;
   text-decoration: none;
 }
@@ -1507,12 +1489,15 @@ p, li {
 }
 
 p {
-  margin: 0 0 40px;
   max-width: 750px;
 }
 
 h2 + p {
   margin-top: 13px;
+}
+
+p + h2, p + h3 {
+  margin-top: 34px;
 }
 
 /*********************
@@ -1742,6 +1727,13 @@ CONTENT
 /*********************
 REFERENZEN
 *********************/
+.page-template-page-referenzen-filtered .inner-content__main p {
+  padding-left: 20px;
+}
+
+.refs_container {
+  margin-top: 34px;
+}
 .refs_container:hover .ref_article:hover {
   opacity: 1;
 }
@@ -1818,7 +1810,7 @@ REFERENZEN
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-template-rows: 1fr;
-  grid-template-areas: "topic topic link link link link link more";
+  grid-template-areas: "topic topic link link link link more more";
 }
 .ref_bottom_row .ref_topic {
   grid-area: topic;
@@ -1838,11 +1830,12 @@ REFERENZEN
 .single-reference .reference_content aside {
   width: 25%;
   flex-basis: 25%;
-  padding: 0 30px 0 0;
+  padding: 0 30px 21px 0;
   color: var(--gray2);
   font-size: 13px;
   animation: fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
-  -webkit-animation: fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+  align-self: baseline;
+  border-bottom: 8px solid var(--gray-0);
 }
 .single-reference .reference_content aside span {
   font-weight: 600;
@@ -1866,9 +1859,11 @@ REFERENZEN
 .article_text {
   width: 75%;
   max-width: 750px;
+  padding-left: 30px;
 }
 .article_text .article_text__header {
   padding-bottom: 21px;
+  position: relative;
 }
 .article_text .article_text__header::after {
   content: "";
@@ -1876,9 +1871,23 @@ REFERENZEN
   height: 11px;
   width: 100%;
   background: var(--yellow);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
   animation: scale-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
-  -webkit-animation: scale-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
   transform-origin: left;
+  z-index: 0;
+}
+.article_text .article_text__header::before {
+  content: "";
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  position: absolute;
+  left: -1px;
+  bottom: 21px;
+  background: var(--purple);
+  z-index: 1;
 }
 .article_text .entry-content {
   margin-top: 34px;

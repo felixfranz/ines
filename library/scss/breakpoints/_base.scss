@@ -79,7 +79,7 @@ p a:visited {
 	padding: 2px 0;
 
 	&:hover {
-		background: var(--blue);
+		background: var(--purple);
 		color: white;
 		text-decoration: none;
 	}
@@ -147,12 +147,16 @@ p, li{
 
 
 p{
-	margin: 0 0 40px;
+	//margin: 0 0 40px;
 	max-width: 750px;
 }
 
 h2+p{
 	margin-top: 13px;
+}
+
+p+h2, p+h3{
+	margin-top: 34px;
 }
 
 
@@ -442,7 +446,18 @@ CONTENT
 /*********************
 REFERENZEN
 *********************/
+
+.page-template-page-referenzen-filtered{
+	.inner-content__main{
+		p{
+			padding-left: 20px;
+		}
+	}
+}
+
 .refs_container{
+	//transform: translateX(-20px);
+	margin-top: 34px;
    &:hover{
 	.ref_article{
 		//opacity: 0.6;
@@ -538,7 +553,7 @@ REFERENZEN
 	display: grid;
 	grid-template-columns: repeat(8, minmax(0, 1fr));
 	grid-template-rows: 1fr;
-	grid-template-areas: "topic topic link link link link link more";
+	grid-template-areas: "topic topic link link link link more more";
 
 	.ref_topic{
 		grid-area: topic;
@@ -565,11 +580,12 @@ REFERENZEN
 		aside{
 			width: 25%;
 			flex-basis: 25%;
-			padding: 0 30px 0 0;
+			padding: 0 30px 21px 0;
 			color: var(--gray2);
 			font-size: 13px;
 			animation: fade-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-			-webkit-animation: fade-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+			align-self: baseline;
+			border-bottom: 8px solid var(--gray-0);
 			
 			span{
 				font-weight: 600;
@@ -598,8 +614,10 @@ REFERENZEN
 .article_text{
 	width: 75%;
 	max-width: 750px;
+	padding-left: 30px;
 	.article_text__header{
 		padding-bottom: 21px;
+		position: relative;
 		
 		&::after{
 			content: '';
@@ -607,10 +625,27 @@ REFERENZEN
 			height: 11px;
 			width: 100%;
 			background: var(--yellow);
+			border-bottom-right-radius: 5px;
+			border-top-right-radius: 5px;
 			animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-			-webkit-animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 			transform-origin: left;
+			z-index: 0;
 		}
+
+		&::before{
+			content: '';
+			display: inline-block;
+			height: 21px;
+			width: 21px;
+			border-radius: 50%;
+			position: absolute;
+			left: -1px;
+			bottom: 21px;
+			background: var(--purple);
+			z-index: 1;
+		}
+
+		
 	}
 	.entry-content{
 		margin-top: 34px;
