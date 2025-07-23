@@ -114,9 +114,9 @@
 																<div class="ref_date"><?php echo $ref_date; ?></div>
 															<?php endif; ?>
 															<?php if($ref_date_since) : ?>
-																<div class="ref_date"><?php echo $ref_date_since; ?></div>
+																<div class="ref_date_since"><?php echo $ref_date_since; ?></div>
 															<?php endif; ?>
-																<div class="ref_date"><?php echo $ref_date; ?></div>
+																
 																<div class="ref_kind"><span>Aufgabe:</span> <?php echo $kinds_to_echo; ?></div>
 																<div class="ref_format"><span>Format: </span> <?php echo $formats_to_echo; ?></div>
 															</div>
