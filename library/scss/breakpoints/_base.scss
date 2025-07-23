@@ -188,13 +188,13 @@ HEADER STYLES
     	align-items: stretch;
 		width: 100%;
 		max-width: none;
+		flex-wrap: wrap;
     	
 		nav{
 			display: flex;
 		}
 
 		.nav{
-
 			margin: 0;
 			display: flex;
 		}
@@ -207,6 +207,8 @@ HEADER STYLES
 	border-right: var(--border);
 	display: flex;
 	position: relative;
+	width: 100%;
+	border-bottom: var(--border);
 	a::before{
 		content: '';
 		position: absolute;
@@ -269,21 +271,29 @@ NAVIGATION STYLES
 
 	display: flex;
 	align-items: stretch;
+	width: 100%;
+	nav{
+		width: 100%;
+	}
 	.nav{
+		
+		width: 100%;
 		li{
 			display: flex;
 			justify-content: center;
 			align-items: stretch;
+			flex-basis: 50%;
 			a{
+				width: 100%;
+
 				
-				display: flex;
-				align-items: center;
 				
 				font-size: 21px;
 				font-family: var(--font-serif);
 				font-weight: 600;
-				padding: 0 40px;
+				padding: 10px 40px;
 				border-right: var(--border);
+				text-align: center;
 				&:hover{
 					color: var(--purple)
 				}
@@ -332,6 +342,8 @@ NAVIGATION STYLES
 	justify-content: center;
 	align-items: center;
 	@include transition(all 0.5s var(--ease));
+
+	display: none;
 
 
 	--toggle-width: 30px;
@@ -560,6 +572,7 @@ REFERENZEN
 	}
 	.ref_link{
 		grid-area: link;
+		word-break: break-word;
 	}
 	.ref_more{
 		grid-area: more;
