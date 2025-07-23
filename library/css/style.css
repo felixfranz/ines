@@ -1627,7 +1627,7 @@ NAVIGATION STYLES
   font-size: 21px;
   font-family: var(--font-serif);
   font-weight: 600;
-  padding: 10px 40px;
+  padding: 10px 0;
   border-right: var(--border);
   text-align: center;
 }
@@ -1761,6 +1761,7 @@ REFERENZEN
 .ref_article {
   padding: 20px;
   border: 1px solid var(--border-color);
+  border-bottom: 8px solid var(--gray-0);
   margin-top: -1px;
   position: relative;
   z-index: 1;
@@ -1774,7 +1775,7 @@ REFERENZEN
   grid-template-columns: 100%;
   grid-template-rows: min-content minmax(100px, min-content) min-content;
   grid-template-areas: "topRow" "middleRow" "bottomRow";
-  color: gray;
+  color: #aaa;
 }
 .ref_article:hover {
   z-index: 2;
@@ -1789,7 +1790,7 @@ REFERENZEN
   border-radius: 0 0 10px 10px;
 }
 .ref_article div span {
-  font-weight: 700;
+  font-weight: 600;
 }
 .ref_article a:hover {
   color: var(--purple);
@@ -1799,13 +1800,20 @@ REFERENZEN
   grid-area: topRow;
   pointer-events: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 5px 5px;
   line-height: 1.4rem;
-  height: 1.4rem;
-  grid-template-areas: "date stil format format ";
+  grid-template-areas: "date date" "stil format  ";
 }
-.ref_top_row .ref_date {
+.ref_top_row div {
+  display: flex;
+  line-height: 1.2;
+}
+.ref_top_row div span {
+  margin-right: 3px;
+}
+.ref_top_row .ref_date, .ref_top_row .ref_date_since {
   grid-area: date;
 }
 .ref_top_row .ref_kind {
@@ -1817,10 +1825,9 @@ REFERENZEN
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   color: var(--black);
   font-family: var(--font-serif);
-  font-size: 24px;
   font-weight: 600;
   padding: 20px 12.5% 20px 0;
 }
@@ -1828,9 +1835,12 @@ REFERENZEN
 .ref_bottom_row {
   grid-area: bottomRow;
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  grid-template-rows: 1fr;
-  grid-template-areas: "topic topic link link link link more more";
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas: "topic" "link" "more";
+}
+.ref_bottom_row div + div {
+  margin-top: 10px;
 }
 .ref_bottom_row .ref_topic {
   grid-area: topic;
@@ -1842,7 +1852,8 @@ REFERENZEN
 .ref_bottom_row .ref_more {
   grid-area: more;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  color: var(--purple);
 }
 
 .single-reference .reference_content {
@@ -2331,6 +2342,65 @@ you can add resource intensive styles.
   *********************/
   .entry-content {
     margin: 0 auto;
+  }
+  .ref_article {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
+  }
+  .ref_article:hover {
+    border-color: var(--purple);
+    border-bottom: 1px solid var(--purple);
+  }
+  .ref_top_row {
+    grid-area: topRow;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    line-height: 1.4rem;
+    height: 1.4rem;
+    grid-template-areas: "date stil format format ";
+  }
+  .ref_top_row .ref_date {
+    grid-area: date;
+  }
+  .ref_top_row .ref_kind {
+    grid-area: stil;
+  }
+  .ref_middle_row {
+    grid-area: middleRow;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    color: var(--black);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    padding: 20px 12.5% 20px 0;
+  }
+  .ref_bottom_row {
+    grid-area: bottomRow;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: "topic link link more";
+  }
+  .ref_bottom_row div + div {
+    margin-top: 0px;
+  }
+  .ref_bottom_row .ref_topic {
+    grid-area: topic;
+  }
+  .ref_bottom_row .ref_link {
+    grid-area: link;
+    word-break: break-word;
+  }
+  .ref_bottom_row .ref_more {
+    grid-area: more;
+    display: flex;
+    justify-content: flex-end;
+    color: inherit;
   }
   /*********************
   SIDEBARS & ASIDES
