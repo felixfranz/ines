@@ -103,14 +103,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 
 h1, .h1 {
-	font-size: 34px;
+	font-size: 21px;
 	line-height: 1.1em;
 	font-weight: 600;
 	
 }
 
 h2, .h2 {
-	font-size: 21px;
+	font-size: 16px;
 	line-height: 1.2em;
 	font-weight: 600;
 }
@@ -452,7 +452,7 @@ CONTENT
 }
 
 .inner-content__main{
-	margin-top: 55px;
+	margin-top: 21px;
 }
 
 /*********************
@@ -536,7 +536,6 @@ REFERENZEN
 	grid-template-rows: 1fr 1fr;
 	gap: 5px 5px;
 	line-height: 1.4rem;
-	//height: 1.4rem;
 	grid-template-areas: 
 	"date date" 
 	"stil format  ";
@@ -594,27 +593,50 @@ REFERENZEN
 		grid-area: more;
 		display: flex;
 		justify-content: flex-start;
+		align-items: flex-end;
 		color: var(--purple)
 	}
 }
 
+.ref_article{
+	.ref_link,.ref_format {
+			display: none;
+		}
+}
+
+
 // END REFERENZEN LISTE
 
 /// START SINGLE REFERENZ	
+/// 
+
+.back{
+	font-size: 13px;
+	color: var(--gray2);
+	position: absolute;
+	top: -10px;
+	transform: translateX(3px);
+	&:hover{
+		color: var(--purple);
+	}
+}
 
 .single-reference{
 	.reference_content{
-		
+		padding: 0 5px;
 		display: flex;
+		flex-wrap: wrap;
 		aside{
-			width: 25%;
-			flex-basis: 25%;
-			padding: 0 30px 21px 0;
+			width: 100%;
+			flex-basis: 100%;
+			padding: 21px 30px 21px 0;
 			color: var(--gray2);
 			font-size: 13px;
 			animation: fade-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 			align-self: baseline;
-			border-bottom: 8px solid var(--gray-0);
+			border-top: 5px solid var(--gray-0);
+			margin-top: 13px;
+			order: 2;
 			
 			span{
 				font-weight: 600;
@@ -641,9 +663,10 @@ REFERENZEN
 }
 
 .article_text{
-	width: 75%;
+	order: 1;
+	width: 100%;
 	max-width: 750px;
-	padding-left: 30px;
+	padding-left: 0px;
 	.article_text__header{
 		padding-bottom: 21px;
 		position: relative;
@@ -651,36 +674,37 @@ REFERENZEN
 		&::after{
 			content: '';
 			display: inline-block;
-			height: 11px;
+			height: 8px;
+			position: relative;
+			bottom: -8px;
 			width: 100%;
 			background: var(--yellow);
-			border-bottom-right-radius: 5px;
-			border-top-right-radius: 5px;
+			border-radius: 5px;
 			animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 			transform-origin: left;
 			z-index: 0;
 		}
 
 
-			
-
 		.line-container{
-			height: 21px;
+			height: 13px;
 			width: 100%;
 			background: transparent;
 			position: absolute;
-			bottom:21px;
+			bottom:23px;
+			
+			//background: #000;
 			z-index: 1;
 			.circle{
-				width: 21px;
-				height: 21px;
+				width: 8px;
+				height: 8px;
 			}
 
 			.circle span{
 				display: inline-block;
 				cursor: pointer;
-				width: 21px;
-				height: 21px;
+				width: 8px;
+				height: 8px;
 				border-radius: 50%;
 				background: var(--purple);
 				animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
@@ -690,7 +714,7 @@ REFERENZEN
 
 	}
 	.entry-content{
-		margin-top: 34px;
+		margin-top: 21px;
 	}
 }
 

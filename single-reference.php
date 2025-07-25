@@ -13,7 +13,7 @@
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
-
+						<a href="#" class="back">‹ Zurück zur Übersicht</a>
 						<main id="main" class="inner-content__main m-all t-all d-all cf" >
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

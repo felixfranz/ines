@@ -90,11 +90,18 @@ nav_toggle.click(function(){
   Draggable.create(".circle", {
     type: "x",
     bounds: ".line-container",
-    inertia: true
+    inertia: true,
+    edgeResistance: 0.9
   });
 
 
+  $('a.back').click(function () {
 
+    parent.history.back();
+
+    return false;
+
+  });
 
 
 

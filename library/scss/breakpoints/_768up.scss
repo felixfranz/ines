@@ -21,6 +21,22 @@ body {
 
 }
 
+
+h1,
+.h1 {
+	font-size: 34px;
+	line-height: 1.1em;
+	font-weight: 600;
+
+}
+
+h2,
+.h2 {
+	font-size: 21px;
+	line-height: 1.2em;
+	font-weight: 600;
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -174,9 +190,8 @@ NAVIGATION STYLES
 CONTENT
 *********************/
 
-.entry-content{
-	margin: 0 auto;
-
+.inner-content__main {
+	margin-top: 55px;
 }
 
 .ref_article {
@@ -198,7 +213,6 @@ CONTENT
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	grid-template-rows: 1fr;
 	line-height: 1.4rem;
-	height: 1.4rem;
 	grid-template-areas: "date stil format format ";
 
 	.ref_date {
@@ -230,7 +244,8 @@ CONTENT
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	grid-template-rows: 1fr;
-	grid-template-areas: "topic link link more";
+	grid-template-areas: "topic topic link more";
+	margin-top: 5px;
 
 	div+div {
 			margin-top: 00px;
@@ -250,6 +265,110 @@ CONTENT
 		display: flex;
 		justify-content: flex-end;
 		color: inherit;
+	}
+}
+
+
+/// START SINGLE REFERENZ	
+
+.single-reference {
+	.reference_content {
+		padding: 0;
+		display: flex;
+
+		aside {
+			order: 1;
+			width: 25%;
+			flex-basis: 25%;
+			padding: 0 30px 21px 0;
+			color: var(--gray2);
+			font-size: 13px;
+			animation: fade-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+			align-self: baseline;
+			border-top: none;
+			border-bottom: 8px solid var(--gray-0);
+
+			span {
+				font-weight: 600;
+				display: inline-block;
+				width: 80px;
+				color: var(--gray3);
+			}
+
+			div {
+				white-space: break-spaces;
+			}
+
+			div+div {
+				margin-top: 8px;
+			}
+
+			a {
+
+				text-decoration: underline;
+
+				&:hover {
+					color: var(--purple);
+				}
+			}
+		}
+	}
+}
+
+.article_text {
+	order: 2;
+	width: 75%;
+	max-width: 750px;
+	padding-left: 30px;
+
+	.article_text__header {
+		padding-bottom: 21px;
+		position: relative;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			height: 11px;
+			width: 100%;
+			bottom: auto;
+			background: var(--yellow);
+			border-bottom-right-radius: 5px;
+			border-top-right-radius: 5px;
+			animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+			transform-origin: left;
+			z-index: 0;
+		}
+
+
+		.line-container {
+			height: 21px;
+			width: 100%;
+			background: transparent;
+			position: absolute;
+			bottom: 21px;
+			z-index: 1;
+
+			.circle {
+				width: 21px;
+				height: 21px;
+			}
+
+			.circle span {
+				display: inline-block;
+				cursor: pointer;
+				width: 21px;
+				height: 21px;
+				border-radius: 50%;
+				background: var(--purple);
+				animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+
+			}
+		}
+
+	}
+
+	.entry-content {
+		margin-top: 34px;
 	}
 }
 

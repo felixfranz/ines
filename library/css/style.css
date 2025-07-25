@@ -1456,13 +1456,13 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 }
 
 h1, .h1 {
-  font-size: 34px;
+  font-size: 21px;
   line-height: 1.1em;
   font-weight: 600;
 }
 
 h2, .h2 {
-  font-size: 21px;
+  font-size: 16px;
   line-height: 1.2em;
   font-weight: 600;
 }
@@ -1741,7 +1741,7 @@ CONTENT
 }
 
 .inner-content__main {
-  margin-top: 55px;
+  margin-top: 21px;
 }
 
 /*********************
@@ -1853,21 +1853,41 @@ REFERENZEN
   grid-area: more;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
+  color: var(--purple);
+}
+
+.ref_article .ref_link, .ref_article .ref_format {
+  display: none;
+}
+
+.back {
+  font-size: 13px;
+  color: var(--gray2);
+  position: absolute;
+  top: -10px;
+  transform: translateX(3px);
+}
+.back:hover {
   color: var(--purple);
 }
 
 .single-reference .reference_content {
+  padding: 0 5px;
   display: flex;
+  flex-wrap: wrap;
 }
 .single-reference .reference_content aside {
-  width: 25%;
-  flex-basis: 25%;
-  padding: 0 30px 21px 0;
+  width: 100%;
+  flex-basis: 100%;
+  padding: 21px 30px 21px 0;
   color: var(--gray2);
   font-size: 13px;
   animation: fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
   align-self: baseline;
-  border-bottom: 8px solid var(--gray-0);
+  border-top: 5px solid var(--gray-0);
+  margin-top: 13px;
+  order: 2;
 }
 .single-reference .reference_content aside span {
   font-weight: 600;
@@ -1889,9 +1909,10 @@ REFERENZEN
 }
 
 .article_text {
-  width: 75%;
+  order: 1;
+  width: 100%;
   max-width: 750px;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 .article_text .article_text__header {
   padding-bottom: 21px;
@@ -1900,38 +1921,39 @@ REFERENZEN
 .article_text .article_text__header::after {
   content: "";
   display: inline-block;
-  height: 11px;
+  height: 8px;
+  position: relative;
+  bottom: -8px;
   width: 100%;
   background: var(--yellow);
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
   animation: scale-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
   transform-origin: left;
   z-index: 0;
 }
 .article_text .article_text__header .line-container {
-  height: 21px;
+  height: 13px;
   width: 100%;
   background: transparent;
   position: absolute;
-  bottom: 21px;
+  bottom: 23px;
   z-index: 1;
 }
 .article_text .article_text__header .line-container .circle {
-  width: 21px;
-  height: 21px;
+  width: 8px;
+  height: 8px;
 }
 .article_text .article_text__header .line-container .circle span {
   display: inline-block;
   cursor: pointer;
-  width: 21px;
-  height: 21px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--purple);
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s both;
 }
 .article_text .entry-content {
-  margin-top: 34px;
+  margin-top: 21px;
 }
 
 /* post meta */
@@ -2221,6 +2243,18 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
+  h1,
+  .h1 {
+    font-size: 34px;
+    line-height: 1.1em;
+    font-weight: 600;
+  }
+  h2,
+  .h2 {
+    font-size: 21px;
+    line-height: 1.2em;
+    font-weight: 600;
+  }
   /*********************
   LAYOUT & GRID STYLES
   *********************/
@@ -2340,8 +2374,8 @@ you can add resource intensive styles.
   /*********************
   CONTENT
   *********************/
-  .entry-content {
-    margin: 0 auto;
+  .inner-content__main {
+    margin-top: 55px;
   }
   .ref_article {
     padding: 20px;
@@ -2359,7 +2393,6 @@ you can add resource intensive styles.
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr;
     line-height: 1.4rem;
-    height: 1.4rem;
     grid-template-areas: "date stil format format ";
   }
   .ref_top_row .ref_date {
@@ -2384,7 +2417,8 @@ you can add resource intensive styles.
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr;
-    grid-template-areas: "topic link link more";
+    grid-template-areas: "topic topic link more";
+    margin-top: 5px;
   }
   .ref_bottom_row div + div {
     margin-top: 0px;
@@ -2401,6 +2435,87 @@ you can add resource intensive styles.
     display: flex;
     justify-content: flex-end;
     color: inherit;
+  }
+  .single-reference .reference_content {
+    padding: 0;
+    display: flex;
+  }
+  .single-reference .reference_content aside {
+    order: 1;
+    width: 25%;
+    flex-basis: 25%;
+    padding: 0 30px 21px 0;
+    color: var(--gray2);
+    font-size: 13px;
+    animation: fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+    align-self: baseline;
+    border-top: none;
+    border-bottom: 8px solid var(--gray-0);
+  }
+  .single-reference .reference_content aside span {
+    font-weight: 600;
+    display: inline-block;
+    width: 80px;
+    color: var(--gray3);
+  }
+  .single-reference .reference_content aside div {
+    white-space: break-spaces;
+  }
+  .single-reference .reference_content aside div + div {
+    margin-top: 8px;
+  }
+  .single-reference .reference_content aside a {
+    text-decoration: underline;
+  }
+  .single-reference .reference_content aside a:hover {
+    color: var(--purple);
+  }
+  .article_text {
+    order: 2;
+    width: 75%;
+    max-width: 750px;
+    padding-left: 30px;
+  }
+  .article_text .article_text__header {
+    padding-bottom: 21px;
+    position: relative;
+  }
+  .article_text .article_text__header::after {
+    content: "";
+    display: inline-block;
+    height: 11px;
+    width: 100%;
+    bottom: auto;
+    background: var(--yellow);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    animation: scale-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+    transform-origin: left;
+    z-index: 0;
+  }
+  .article_text .article_text__header .line-container {
+    height: 21px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    bottom: 21px;
+    z-index: 1;
+  }
+  .article_text .article_text__header .line-container .circle {
+    width: 21px;
+    height: 21px;
+  }
+  .article_text .article_text__header .line-container .circle span {
+    display: inline-block;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: var(--purple);
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s both;
+  }
+  .article_text .entry-content {
+    margin-top: 34px;
   }
   /*********************
   SIDEBARS & ASIDES
